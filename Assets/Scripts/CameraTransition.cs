@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class CameraTransition : MonoBehaviour
 {
@@ -24,9 +26,13 @@ public class CameraTransition : MonoBehaviour
             return;
 
         _transitionTime += Time.fixedDeltaTime;
+        MathF.Min(_transitionTime, 1.0f);
         transform.position = Vector3.Lerp(_initialPosition, _targetPosition, _transitionTime);
         
-        if (Vector3.Distance(transform.position, _targetPosition) < 0.1f)
+        if (_transitionTime >= 1.0f)
+        {
+            transform.position = _targetPosition;
             _transitioning = false;
+        }
     }
 }
