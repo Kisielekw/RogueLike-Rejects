@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 29089897425595442}
   - component: {fileID: 5973337613293195840}
   - component: {fileID: 8739011464353922246}
+  - component: {fileID: 7814741497149298144}
   - component: {fileID: 4807140347581014913}
   - component: {fileID: 7757864075885737485}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: HeavyEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.41, y: 0.26, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +103,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c34e1d5550784643b96d3346cfb2e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1
+  _health: 3
+--- !u!114 &7814741497149298144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161404624719874261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07455984d1ff902488534c782d82cab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2
+  _attackRange: 1
+  _attackCooldown: 5
+  _attackDamage: 2
 --- !u!50 &4807140347581014913
 Rigidbody2D:
   serializedVersion: 5
@@ -111,14 +128,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6161404624719874261}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
