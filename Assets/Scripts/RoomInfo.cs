@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoomInfo : MonoBehaviour
@@ -78,6 +80,50 @@ public class RoomInfo : MonoBehaviour
                 return rightRoom != null;
             default:
                 return false;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        var player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
+        if(!player.CompareCurrentRoom(gameObject))
+        {
+            return;
+        }
+
+        List<GameObject> enemies = new List<GameObject>();
+        foreach (Transform child in transform.Find("Enemies"))
+        {
+            if (child.CompareTag("Enemy"))
+            {
+                enemies.Add(child.gameObject);
+            }
+        }
+
+        if (enemies.Count > 0)
+            return;
+
+        foreach (Transform child in transform.Find("Doors"))
+        {
+            child.GetComponent<Collider2D>().isTrigger = true;
+        }
+    }
+
+    public GameObject GetRoomInDirection(RoomDirection direction)
+    {
+        switch (direction)
+        {
+            case RoomDirection.up:
+                return upRoom;
+            case RoomDirection.down:
+                return downRoom;
+            case RoomDirection.left:
+                return leftRoom;
+            case RoomDirection.right:
+                return rightRoom;
+            default:
+                return null;
         }
     }
 }

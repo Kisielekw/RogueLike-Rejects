@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 _transitionDestination;
     private Vector2 _transitionStart;
 
+    private GameObject _currentRoom;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,18 +54,17 @@ public class PlayerController : MonoBehaviour
         if(_transitioning)
         {
             _transitionTime += Time.fixedDeltaTime;
+            _transitionTime = Mathf.Clamp(_transitionTime, 0.0f, 1.0f);
             transform.position = Vector3.Lerp(_transitionStart, _transitionDestination, _transitionTime);
-            if(Vector3.Distance(transform.position, _transitionDestination) < 0.1f)
-            {
+            if(Mathf.Abs(_transitionTime - 1.0f) < 0.0001)
                 _transitioning = false;
-            }
             return;
         }
         Vector2 movement = _movement.ReadValue<Vector2>();
-        transform.Translate(new Vector3(movement.x , movement.y, 0) * _playerData.speed * Time.fixedDeltaTime);
+        transform.Translate(new Vector3(movement.x , movement.y, 0).normalized * _playerData.speed * Time.fixedDeltaTime);
     }
 
-    public void Transition(Vector2 direction)
+    public void Transition(Vector2 direction, GameObject room)
     {
         if (!_transitioning)
         {
@@ -71,6 +72,23 @@ public class PlayerController : MonoBehaviour
             _transitionDestination = direction;
             _transitionStart = transform.position;
             _transitionTime = 0;
+
+            _currentRoom = room;
         }
+    }
+
+    public bool CompareCurrentRoom(GameObject room)
+    {
+        return room == _currentRoom;
+    }
+
+    public void SetCurrentRoom(GameObject room)
+    {
+        _currentRoom = room;
+    }
+
+    public bool IsInRoom()
+    {
+        return !_transitioning;
     }
 }

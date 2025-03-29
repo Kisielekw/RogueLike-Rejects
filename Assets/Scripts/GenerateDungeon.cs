@@ -18,46 +18,15 @@ public class GenerateDungeon : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        bool conntinueGeneration = true;
-        do
-        {
-            _roomList = new List<GameObject> { Instantiate(_entryPrefab, transform) };
-            var roomInfo = _roomList[0].GetComponent<RoomInfo>();
-            roomInfo.SetRoomDepth(0);
-            roomInfo.SetRoomPosition(Vector2.zero);
+        _roomList = new List<GameObject> { Instantiate(_entryPrefab, transform) };
+        var roomInfo = _roomList[0].GetComponent<RoomInfo>();
+        roomInfo.SetRoomDepth(0);
+        roomInfo.SetRoomPosition(Vector2.zero);
 
-            GenerateRooms();
+        var player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        player.SetCurrentRoom(_roomList[0]);
 
-            conntinueGeneration = false;
-            for (int i = 0; i < _roomList.Count; i++)
-            {
-                for(int j = 0; j < _roomList.Count; j++)
-                {
-                    if (i == j)
-                        continue;
-                    var room1 = _roomList[i].GetComponent<RoomInfo>();
-                    var room2 = _roomList[j].GetComponent<RoomInfo>();
-                    if (room1.GetRoomPosition() == room2.GetRoomPosition())
-                    {
-                        conntinueGeneration = true;
-                        break;
-                    }
-                }
-                if (conntinueGeneration)
-                    break;
-            }
-
-            if(conntinueGeneration)
-            {
-                foreach (var room in _roomList)
-                {
-                    Destroy(room);
-                }
-            }
-
-            _roomList.Clear();
-
-        } while (conntinueGeneration);
+        GenerateRooms();
     }
 
     void GenerateRooms()
@@ -92,11 +61,37 @@ public class GenerateDungeon : MonoBehaviour
                 return info.Down;
             }).ToArray();
 
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(0, 20)))
+            {
+                upRooms = upRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Up;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(-18, 10)))
+            {
+                upRooms = upRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Left;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(18, 10)))
+            {
+                upRooms = upRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Right;
+                }).ToArray();
+            }
+
             var upRoom = Instantiate(upRooms[Random.Range(0, upRooms.Length)], transform);
             var upRoomInfo = upRoom.GetComponent<RoomInfo>();
             upRoomInfo.SetRoomDepth(roomInfo.getRoomDepth() + 1);
             upRoomInfo.SetRoomPosition(roomInfo.GetRoomPosition() + new Vector2(0, 10));
             upRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.down, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.up, upRoom);
 
             _roomList.Add(upRoom);
 
@@ -110,11 +105,37 @@ public class GenerateDungeon : MonoBehaviour
                 return info.Up;
             }).ToArray();
 
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(0, -20)))
+            {
+                downRooms = downRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Down;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(-18, -10)))
+            {
+                downRooms = downRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Left;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(18, -10)))
+            {
+                downRooms = downRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Right;
+                }).ToArray();
+            }
+
             var downRoom = Instantiate(downRooms[Random.Range(0, downRooms.Length)], transform);
             var downRoomInfo = downRoom.GetComponent<RoomInfo>();
             downRoomInfo.SetRoomDepth(roomInfo.getRoomDepth() + 1);
             downRoomInfo.SetRoomPosition(roomInfo.GetRoomPosition() + new Vector2(0, -10));
             downRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.up, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.down, downRoom);
 
             _roomList.Add(downRoom);
 
@@ -128,11 +149,37 @@ public class GenerateDungeon : MonoBehaviour
                 return info.Right;
             }).ToArray();
 
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(-18 * 2, 0)))
+            {
+                leftRooms = leftRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Left;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(-18, -10)))
+            {
+                leftRooms = leftRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Down;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(-18, 10)))
+            {
+                leftRooms = leftRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Up;
+                }).ToArray();
+            }
+
             var leftRoom = Instantiate(leftRooms[Random.Range(0, leftRooms.Length)], transform);
             var leftRoomInfo = leftRoom.GetComponent<RoomInfo>();
             leftRoomInfo.SetRoomDepth(roomInfo.getRoomDepth() + 1);
             leftRoomInfo.SetRoomPosition(roomInfo.GetRoomPosition() + new Vector2(-18, 0));
             leftRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.right, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.left, leftRoom);
 
             _roomList.Add(leftRoom);
 
@@ -146,11 +193,37 @@ public class GenerateDungeon : MonoBehaviour
                 return info.Left;
             }).ToArray();
 
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(18 * 2, 0)))
+            {
+                rightRooms = rightRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Right;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(18, -10)))
+            {
+                rightRooms = rightRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Down;
+                }).ToArray();
+            }
+            if (CheckIfRoomExists(roomInfo.GetRoomPosition() + new Vector2(18, 10)))
+            {
+                rightRooms = rightRooms.Where(room =>
+                {
+                    RoomInfo info = room.GetComponent<RoomInfo>();
+                    return !info.Up;
+                }).ToArray();
+            }
+
             var rightRoom = Instantiate(rightRooms[Random.Range(0, rightRooms.Length)], transform);
             var leftRoomInfo = rightRoom.GetComponent<RoomInfo>();
             leftRoomInfo.SetRoomDepth(roomInfo.getRoomDepth() + 1);
             leftRoomInfo.SetRoomPosition(roomInfo.GetRoomPosition() + new Vector2(18, 0));
             leftRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.left, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.right, rightRoom);
 
             _roomList.Add(rightRoom);
 
