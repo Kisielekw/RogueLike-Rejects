@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3479628417687725768}
   - component: {fileID: 2696182698661706200}
+  - component: {fileID: 7320787717384186097}
   m_Layer: 0
   m_Name: West
   m_TagString: Untagged
@@ -78,6 +79,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &7320787717384186097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063331260791548558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6957cd5a26468740b9d46c9c4620492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: -1, y: 0}
 --- !u!1 &2276282782453802637
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5713690942707818823}
+  - component: {fileID: 479657423479532}
   m_Layer: 0
   m_Name: EWTemplate
   m_TagString: Untagged
@@ -296,6 +311,22 @@ Transform:
   - {fileID: 8924404752293676675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479657423479532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5054636173686961184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1388cff56be18a64488a0c7f17e0ce65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Up: 0
+  Down: 0
+  Left: 1
+  Right: 1
 --- !u!1 &5516945495574465310
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389077488906044447}
   - component: {fileID: 4020193800105817400}
+  - component: {fileID: 5387616498009772599}
   m_Layer: 0
   m_Name: East
   m_TagString: Untagged
@@ -497,3 +529,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &5387616498009772599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581079627029805374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6957cd5a26468740b9d46c9c4620492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 1, y: 0}
