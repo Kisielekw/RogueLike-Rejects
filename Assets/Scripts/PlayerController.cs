@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
 
     private GameObject _weapon;
 
+    private bool _transitioning = false;
+    private float _transitionTime = 0;
+    private Vector2 _transitionDestination;
+    private Vector2 _transitionStart;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,14 +42,35 @@ public class PlayerController : MonoBehaviour
         _weapon.transform.localPosition = new Vector3(LookVector.x, LookVector.y, 0);
 
         
-        if(_hit.IsPressed())
+        if(_hit.IsPressed() && !_transitioning)
             _weapon.GetComponent<PlayerAttack>().OnHit();
 
     }
 
     void FixedUpdate()
     {
+        if(_transitioning)
+        {
+            _transitionTime += Time.fixedDeltaTime;
+            transform.position = Vector3.Lerp(_transitionStart, _transitionDestination, _transitionTime);
+            if(Vector3.Distance(transform.position, _transitionDestination) < 0.1f)
+            {
+                _transitioning = false;
+            }
+            return;
+        }
         Vector2 movement = _movement.ReadValue<Vector2>();
         transform.Translate(new Vector3(movement.x , movement.y, 0) * _playerData.speed * Time.fixedDeltaTime);
+    }
+
+    public void Transition(Vector2 direction)
+    {
+        if (!_transitioning)
+        {
+            _transitioning = true;
+            _transitionDestination = direction;
+            _transitionStart = transform.position;
+            _transitionTime = 0;
+        }
     }
 }
