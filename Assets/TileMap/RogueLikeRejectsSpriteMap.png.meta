@@ -149,7 +149,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8c90f2354c488041808c0d865339c20
+      spriteID: 0fa7d4a0a3315d84886fbaf501d15d54
       internalID: -635057528
       vertices: []
       indices: 
@@ -171,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c40ef9bddca30f04f8cc4f1a3dc7e7ae
+      spriteID: 636cd79863bbc0d4f9ed51935e344ae1
       internalID: 624098937
       vertices: []
       indices: 
@@ -193,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df72434e356b73f4ea2124fe4ebb9b19
+      spriteID: c1eef1047e6a0c34e92c9bde1713f8a9
       internalID: -984787496
       vertices: []
       indices: 
@@ -215,7 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25f037192d3dd7e46904ed1878725774
+      spriteID: 1ea3f3f861421df44b48952983794f42
       internalID: -1564825295
       vertices: []
       indices: 
@@ -237,7 +237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1618e3f45bf4fda40bee08cd434b4d36
+      spriteID: 859d7438c33ee884c986799872e2b4fe
       internalID: 1999533980
       vertices: []
       indices: 
@@ -259,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf8be297eeaafdb4c85f36cbb9b1c2a0
+      spriteID: ab7f96470206d394ba0ad873e5f13fb7
       internalID: -1664891099
       vertices: []
       indices: 
@@ -281,7 +281,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a927d9a44b58a3b46920c590acefabeb
+      spriteID: bcb87972feb381749998d8fbfc77347b
       internalID: -820989806
       vertices: []
       indices: 
@@ -303,7 +303,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e10af1c457da7004f87387dd274d6958
+      spriteID: 928f3d882a69f70458eac256ea33fe36
       internalID: -30940150
       vertices: []
       indices: 
@@ -325,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4010b546b6d6b274b9180fb3671f2bae
+      spriteID: f7608fff5dcb0054eb9fc77b07946909
       internalID: 165953374
       vertices: []
       indices: 
@@ -336,7 +336,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -347,7 +347,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fad42a321dbd6494b9941f896844e453
+      spriteID: 9b9b0b9a15ca82b4ab650901c9b1181b
       internalID: -8581541
       vertices: []
       indices: 
@@ -358,7 +358,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -369,7 +369,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a16b6cc1f1975b4ca5b0c5b0c08ffbf
+      spriteID: 66f6162f3d86d3b4aaea1a1130160292
       internalID: 1517160342
       vertices: []
       indices: 
@@ -380,7 +380,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -391,7 +391,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af61d273cbfdd9842bd019249b29617a
+      spriteID: 3d6f2dd314d27394691d5d287f074b2b
       internalID: 1686279821
       vertices: []
       indices: 
@@ -402,7 +402,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -413,7 +413,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48392326fb80b64eb917c1131bc27cd
+      spriteID: 1b8e60cf43f06ca44ab10505b0bf5766
       internalID: -61127920
       vertices: []
       indices: 
@@ -424,6 +424,28 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a3c7be49da78340b9ac703e9fa1532
+      internalID: 781499518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_15
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 128
         width: 64
         height: 64
@@ -435,29 +457,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3786a579c2a9b04da5427de76715abc
-      internalID: 781499518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a45e4b568686ec946afc195f2b90e1d4
+      spriteID: d978d6f83e797054fbea2a68af083353
       internalID: 1642623622
       vertices: []
       indices: 
@@ -468,6 +468,94 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487be4d0a7a22fa43806f6129e651452
+      internalID: 1258028959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df65495f19c33fd4fb8d4a776c8e4bd4
+      internalID: -2144087524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb996fe1302cb734e8b4bcb080d6fadc
+      internalID: -1735671619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86e5299916f75b4e8b29eb8e714729d
+      internalID: -444525297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_20
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 64
         width: 64
         height: 64
@@ -479,14 +567,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd8108b3a1fe5d4882b182445ae15a4
-      internalID: 1258028959
+      spriteID: e8cf7b043f33a174d9abc0216e18cbe5
+      internalID: 178127362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_17
+      name: RogueLikeRejectsSpriteMap_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e410dbd00a96634eb6cacdf4b28089e
+      internalID: 1772080794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_22
       rect:
         serializedVersion: 2
         x: 128
@@ -501,14 +611,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc5a0d7a9a102424dafbaafff560a5d2
-      internalID: -2144087524
+      spriteID: c23d1eaa3e7c4864faf14845bf386bbe
+      internalID: -814145868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_18
+      name: RogueLikeRejectsSpriteMap_23
       rect:
         serializedVersion: 2
         x: 192
@@ -523,36 +633,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7401829071873854091b349f12fa0bbf
-      internalID: -1735671619
+      spriteID: bb65dc2490fa5ef46b9acfc1423bdf00
+      internalID: 1428417916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_19
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a199b812059c904d9fc4e9e47e2efb0
-      internalID: -444525297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_20
+      name: RogueLikeRejectsSpriteMap_24
       rect:
         serializedVersion: 2
         x: 0
@@ -567,14 +655,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3268c6928446ae7489576a59d9fe086a
-      internalID: 178127362
+      spriteID: c709f6db12b66ef409b45bd28523ef16
+      internalID: 351667741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_21
+      name: RogueLikeRejectsSpriteMap_25
       rect:
         serializedVersion: 2
         x: 64
@@ -589,14 +677,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 126a5e831b8ca3846b587be680cbb7b0
-      internalID: 1772080794
+      spriteID: 5e30556361f34784597efda39ff235cd
+      internalID: -2013861185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_22
+      name: RogueLikeRejectsSpriteMap_26
       rect:
         serializedVersion: 2
         x: 128
@@ -611,14 +699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db343ec081455a54eb4c605c3a67183f
-      internalID: -814145868
+      spriteID: a067f6776e01a924fb27419c605f24d7
+      internalID: -884456919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RogueLikeRejectsSpriteMap_23
+      name: RogueLikeRejectsSpriteMap_27
       rect:
         serializedVersion: 2
         x: 192
@@ -633,8 +721,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f665c9174eaa3645a3c57fe9d3673da
-      internalID: 1428417916
+      spriteID: e9184190313bab94a9c074d792109414
+      internalID: 1421602598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd6e7242ff361b41a4e9aaa510c544b
+      internalID: -268416453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RogueLikeRejectsSpriteMap_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d9706c3512b3841b2fa9e27a811cd2
+      internalID: 501435620
       vertices: []
       indices: 
       edges: []
@@ -670,6 +802,12 @@ TextureImporter:
       RogueLikeRejectsSpriteMap_21: 1772080794
       RogueLikeRejectsSpriteMap_22: -814145868
       RogueLikeRejectsSpriteMap_23: 1428417916
+      RogueLikeRejectsSpriteMap_24: 351667741
+      RogueLikeRejectsSpriteMap_25: -2013861185
+      RogueLikeRejectsSpriteMap_26: -884456919
+      RogueLikeRejectsSpriteMap_27: 1421602598
+      RogueLikeRejectsSpriteMap_28: -268416453
+      RogueLikeRejectsSpriteMap_29: 501435620
       RogueLikeRejectsSpriteMap_3: -984787496
       RogueLikeRejectsSpriteMap_4: -1564825295
       RogueLikeRejectsSpriteMap_5: 1999533980
