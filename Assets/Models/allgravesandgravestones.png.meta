@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,6 +109,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -381,7 +394,6 @@ TextureImporter:
     nameFileIdTable:
       allgravesandgravestones_0: 2435720292118632536
       allgravesandgravestones_1: 4205231758416541155
-      allgravesandgravestones_10: 990332722
       allgravesandgravestones_2: -2215915388689098685
       allgravesandgravestones_3: 462628140102747544
       allgravesandgravestones_4: -8664129013967737250
@@ -389,7 +401,6 @@ TextureImporter:
       allgravesandgravestones_6: 339338464196659344
       allgravesandgravestones_7: -7480689075367713301
       allgravesandgravestones_8: -6360821063182624287
-      allgravesandgravestones_9: 2015479592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
