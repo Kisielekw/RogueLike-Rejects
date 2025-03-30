@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bb08f2477fd0e564096381eeca037d3d
+guid: f732c8f027782124caa85cad3afdc59d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3766519690804746565
-    second: shovel_0
+      213: 8547090464059998037
+    second: grave3open_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shovel_0
+      name: grave3open_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 0
-        width: 22
-        height: 64
+        x: 4
+        y: 3
+        width: 56
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb6a11e0c42aabbc0800000000000000
-      internalID: -3766519690804746565
+      spriteID: 55fbc6d1e7d5d9670800000000000000
+      internalID: 8547090464059998037
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      shovel_0: -3766519690804746565
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
