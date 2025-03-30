@@ -7,17 +7,39 @@ public class EnemyHealth : MonoBehaviour
     private int _health;
 
     [SerializeField]
+    private int _healthMax;
+
+    [SerializeField]
     private float _backForce;
+
+    [SerializeField]
+    private EclipseData _eclipseData;
 
     private Vector2 _hitStart;
     private Vector2 _hitEnd;
 
     private float _hitTimer;
     private bool _isHit;
+    private bool _isEclipseActive;
 
     void Update()
     {
-        if(!_isHit)
+        if (_eclipseData.IsEclipseActive && !_isEclipseActive)
+        {
+            _isEclipseActive = true;
+
+            if (CompareTag("HeavyEnemy"))
+                _health += _healthMax;
+        }
+
+        if(!_eclipseData.IsEclipseActive && _isEclipseActive)
+        {
+            _isEclipseActive = false;
+            if (CompareTag("HeavyEnemy"))
+                _health -= _healthMax;
+        }
+
+        if (!_isHit)
             return;
 
         _hitTimer += Time.deltaTime;
