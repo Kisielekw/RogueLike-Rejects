@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyLightPrefab: {fileID: 6161404624719874261, guid: 0c9884106fcdcaa489f1ab5b41fecbbe, type: 3}
   _enemyHeavyPrefab: {fileID: 6161404624719874261, guid: f49742a6abe710445b08e78c16e23324, type: 3}
-  _enemyRangedPrefab: {fileID: 0}
+  _enemyRangedPrefab: {fileID: 6946574007686614861, guid: 328dc71c837bf1540a32365973388970, type: 3}
   _lightSpawnPos: []
   _heavySpawnPos: []
   _rangedSpawnPos: []
@@ -814,7 +814,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -2065,8 +2065,8 @@ Tilemap:
     m_Data: {fileID: -1585939611, guid: 46d99fdaf56bb2c4d94449ff8bbf2bda, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1684048970, guid: 46d99fdaf56bb2c4d94449ff8bbf2bda, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1649329053, guid: 46d99fdaf56bb2c4d94449ff8bbf2bda, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 139
@@ -2081,8 +2081,8 @@ Tilemap:
     m_Data: {fileID: -423633711, guid: 46d99fdaf56bb2c4d94449ff8bbf2bda, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -472298007, guid: 46d99fdaf56bb2c4d94449ff8bbf2bda, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1649329053, guid: 46d99fdaf56bb2c4d94449ff8bbf2bda, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 180
     m_Data:
