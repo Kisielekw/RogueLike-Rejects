@@ -22,6 +22,9 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GetComponent<EnemyHealth>().IsHit())
+            return;
+
         var player = GameObject.FindWithTag("Player");
         var room = transform.parent.parent.gameObject;
 
@@ -47,7 +50,7 @@ public class EnemyControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_isMoving)
+        if (!_isMoving || GetComponent<EnemyHealth>().IsHit())
             return;
 
         var player = GameObject.FindWithTag("Player").transform;
@@ -56,7 +59,7 @@ public class EnemyControl : MonoBehaviour
         transform.position += direction * _speed * Time.fixedDeltaTime;
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         // Display the explosion radius when selected
         Gizmos.color = Color.white;

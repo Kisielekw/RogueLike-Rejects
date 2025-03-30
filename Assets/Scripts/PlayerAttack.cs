@@ -7,7 +7,6 @@ public class PlayerAttack : MonoBehaviour
     private PlayerData _playerData;
 
     private float _hitTimer;
-    private bool _isHitting;
 
     void Start()
     {
@@ -20,8 +19,6 @@ public class PlayerAttack : MonoBehaviour
             return;
 
         _hitTimer += Time.deltaTime;
-        if (_hitTimer >= _playerData.hitTime && _isHitting)
-            HitReset();
     }
 
     public void OnHit()
@@ -29,16 +26,12 @@ public class PlayerAttack : MonoBehaviour
         if(_hitTimer < _playerData.hitCooldown)
             return;
 
-        GameObject weaponHitBox = transform.Find("Hit").gameObject;
-        weaponHitBox.SetActive(true);
+        transform.Find("Hit").gameObject.GetComponent<PlayerHitCollider>().OnHit();
         _hitTimer = 0.0f;
-        _isHitting = true;
     }
 
-    void HitReset()
+    public bool isHitting()
     {
-        GameObject weaponHitBox = transform.Find("Hit").gameObject;
-        weaponHitBox.SetActive(false);
-        _isHitting = false;
+        return _hitTimer > _playerData.hitCooldown;
     }
 }

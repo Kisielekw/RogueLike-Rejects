@@ -23,8 +23,8 @@ public class EnemySpawn : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(_eclipseData.IsEclipseActive)
-            SpawnEnemies();
+        //if(_eclipseData.IsEclipseActive)
+            //SpawnEnemies();
     }
 
     void SpawnEnemies()
