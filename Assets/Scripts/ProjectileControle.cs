@@ -6,12 +6,13 @@ public class ProjectileControle : MonoBehaviour
 
     [SerializeField] private EclipseData _eclipseData;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerHelthScript>().TakeDamage(_eclipseData.IsEclipseActive ? _damage * 2 : _damage);
+            var playerHealth = other.GetComponent<PlayerHelthScript>();
+            playerHealth.TakeDamage(_eclipseData.IsEclipseActive ? _damage * 2 : _damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }
