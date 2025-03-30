@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyControl : MonoBehaviour
+public class EnemyMeleeControl : MonoBehaviour
 {
     [SerializeField]
     private float _speed;
@@ -32,6 +32,7 @@ public class EnemyControl : MonoBehaviour
             return;
 
         float distance = Vector3.Distance(player.transform.position, transform.position);
+        transform.up = player.transform.position;
         if (distance > _attackRange)
         {
             _isMoving = true;

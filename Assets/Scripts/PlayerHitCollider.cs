@@ -8,6 +8,9 @@ public class PlayerHitCollider : MonoBehaviour
     [SerializeField]
     private float _hitSize;
 
+    [SerializeField]
+    private LayerMask _enemyLayer;
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
@@ -16,12 +19,9 @@ public class PlayerHitCollider : MonoBehaviour
 
     public void OnHit()
     {
-        var objectsHit = Physics2D.OverlapCircleAll(transform.position, _hitSize);
+        var objectsHit = Physics2D.OverlapCircleAll(transform.position, _hitSize, _enemyLayer);
         foreach (Collider2D obj in objectsHit)
         {
-            if (!obj.CompareTag("Enemy"))
-                continue;
-
             obj.GetComponent<EnemyHealth>().Damage(_playerData.damage);
         }
     }

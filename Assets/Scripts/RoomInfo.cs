@@ -93,16 +93,18 @@ public class RoomInfo : MonoBehaviour
         }
 
         List<GameObject> enemies = new List<GameObject>();
-        foreach (Transform child in transform.Find("Enemies"))
+        Transform enemyContainer = transform.Find("Enemies");
+        if (enemyContainer != null)
         {
-            if (child.CompareTag("Enemy"))
+            foreach (Transform child in enemyContainer)
             {
+
                 enemies.Add(child.gameObject);
             }
-        }
 
-        if (enemies.Count > 0)
-            return;
+            if (enemies.Count > 0)
+                return;
+        }
 
         foreach (Transform child in transform.Find("Doors"))
         {
