@@ -5,7 +5,6 @@ public class EclipseData : ScriptableObject
 {
     public float eclipsTimeStart;
     public float eclipsDuration;
-    public int eclipseLevel;
     private float _eclipseTimer;
 
     public bool IsEclipseActive => _eclipseTimer >= eclipsTimeStart;
@@ -17,5 +16,10 @@ public class EclipseData : ScriptableObject
         {
             _eclipseTimer = 0;
         }
+    }
+
+    public void ResetEclipseTimer()
+    {
+        _eclipseTimer = 0;
     }
 }
