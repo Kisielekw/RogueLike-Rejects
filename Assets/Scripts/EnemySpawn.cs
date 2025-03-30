@@ -16,6 +16,8 @@ public class EnemySpawn : MonoBehaviour
 
     [SerializeField] private EclipseData _eclipseData;
 
+    private bool _isEclipseActive = false;
+
     void Start()
     {
         SpawnEnemiesLight();
@@ -25,9 +27,15 @@ public class EnemySpawn : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_eclipseData.IsEclipseActive && transform.childCount > 0)
+        if (_eclipseData.IsEclipseActive && transform.childCount > 0 && ! _isEclipseActive)
+        {
+            _isEclipseActive = true;
             SpawnEnemiesLight();
-        
+        }
+        else if(_isEclipseActive && !_eclipseData.IsEclipseActive)
+        {
+            _isEclipseActive = false;
+        }
     }
 
     void SpawnEnemiesLight()
