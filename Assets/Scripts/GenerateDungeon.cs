@@ -11,14 +11,15 @@ public class GenerateDungeon : MonoBehaviour
     private GameObject[] _roomPrefabs;
 
     [SerializeField]
-    private GameObject _entryPrefab;
+    private GameObject[] _entryPrefab;
 
     private List<GameObject> _roomList;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _roomList = new List<GameObject> { Instantiate(_entryPrefab, transform) };
+        
+        _roomList = new List<GameObject> { Instantiate(_entryPrefab[Random.Range(0,_entryPrefab.Length-1)], transform) };
         var roomInfo = _roomList[0].GetComponent<RoomInfo>();
         roomInfo.SetRoomDepth(0);
         roomInfo.SetRoomPosition(Vector2.zero);
