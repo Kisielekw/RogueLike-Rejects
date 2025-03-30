@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "EclipseData", menuName = "Scriptable Objects/EclipseData")]
 public class EclipseData : ScriptableObject
@@ -21,5 +22,10 @@ public class EclipseData : ScriptableObject
     public void ResetEclipseTimer()
     {
         _eclipseTimer = 0;
+    }
+
+    public float GetTime()
+    {
+        return _eclipseTimer;
     }
 }
