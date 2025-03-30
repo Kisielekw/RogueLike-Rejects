@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eclipsTimeStart: 120
   eclipsDuration: 30
-  eclipseLevel: 0
+  eclipseLevel: 1
