@@ -11,14 +11,18 @@ public class GenerateDungeon : MonoBehaviour
     private GameObject[] _roomPrefabs;
 
     [SerializeField]
-    private GameObject[] _entryPrefab;
+    private GameObject[] _entryPrefabs;
+
+    [SerializeField]
+    private GameObject[] _bossRoomPrefabs;
 
     private List<GameObject> _roomList;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _roomList = new List<GameObject> { Instantiate(_entryPrefab[Random.Range(0,_entryPrefab.Length-1)], transform) };
+        
+        _roomList = new List<GameObject> { Instantiate(_entryPrefabs[Random.Range(0,_entryPrefabs.Length)], transform) };
         var roomInfo = _roomList[0].GetComponent<RoomInfo>();
         roomInfo.SetRoomDepth(0);
         roomInfo.SetRoomPosition(Vector2.zero);
@@ -27,6 +31,15 @@ public class GenerateDungeon : MonoBehaviour
         player.SetCurrentRoom(_roomList[0]);
 
         GenerateRooms();
+
+        var oneDoorRooms = _roomList.Where(room =>
+        {
+            var roomInfo = room.GetComponent<RoomInfo>();
+            return roomInfo.GetDoorNumber() == 1 && roomInfo.GetRoomPosition() != Vector2.zero;
+        }).ToList();
+
+        
+        GenerateBossRoom(oneDoorRooms);
     }
 
     void GenerateRooms()
@@ -234,5 +247,94 @@ public class GenerateDungeon : MonoBehaviour
     bool CheckIfRoomExists(Vector2 position)
     {
         return _roomList.Any(room => room.GetComponent<RoomInfo>().GetRoomPosition() == position);
+    }
+
+    void GenerateBossRoom(List<GameObject> oneDoorRooms)
+    {
+        var player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+
+        var furthestRoom = oneDoorRooms.Aggregate((room1, room2) =>
+        {
+            var room1Info = room1.GetComponent<RoomInfo>();
+            var room2Info = room2.GetComponent<RoomInfo>();
+            var room1Distance = Vector2.Distance(player.transform.position, room1Info.GetRoomPosition());
+            var room2Distance = Vector2.Distance(player.transform.position, room2Info.GetRoomPosition());
+            return room1Distance > room2Distance ? room1 : room2;
+        });
+
+        oneDoorRooms.Remove(furthestRoom);
+
+        RoomInfo furthestInfo = furthestRoom.GetComponent<RoomInfo>();
+        Vector2 furthestPosition = furthestInfo.GetRoomPosition();
+
+        if (furthestInfo.Up)
+        {
+            var room = furthestInfo.GetRoomInDirection(RoomInfo.RoomDirection.up);
+            var roomInfo = room.GetComponent<RoomInfo>();
+            _roomList.Remove(furthestRoom);
+            Destroy(furthestRoom);
+            var newRoom = Instantiate(_bossRoomPrefabs.First(room =>
+            {
+                var roomInfo = room.GetComponent<RoomInfo>();
+                return roomInfo.Up;
+            }), transform);
+            var newRoomInfo = newRoom.GetComponent<RoomInfo>();
+            newRoomInfo.SetRoomDepth(furthestInfo.getRoomDepth());
+            newRoomInfo.SetRoomPosition(furthestPosition);
+            newRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.up, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.down, newRoom);
+
+        }
+        else if (furthestInfo.Down)
+        {
+            var room = furthestInfo.GetRoomInDirection(RoomInfo.RoomDirection.down);
+            var roomInfo = room.GetComponent<RoomInfo>();
+            _roomList.Remove(furthestRoom);
+            Destroy(furthestRoom);
+            var newRoom = Instantiate(_bossRoomPrefabs.First(room =>
+            {
+                var roomInfo = room.GetComponent<RoomInfo>();
+                return roomInfo.Down;
+            }), transform);
+            var newRoomInfo = newRoom.GetComponent<RoomInfo>();
+            newRoomInfo.SetRoomDepth(furthestInfo.getRoomDepth());
+            newRoomInfo.SetRoomPosition(furthestPosition);
+            newRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.down, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.up, newRoom);
+        }
+        else if (furthestInfo.Left)
+        {
+            var room = furthestInfo.GetRoomInDirection(RoomInfo.RoomDirection.left);
+            var roomInfo = room.GetComponent<RoomInfo>();
+            _roomList.Remove(furthestRoom);
+            Destroy(furthestRoom);
+            var newRoom = Instantiate(_bossRoomPrefabs.First(room =>
+            {
+                var roomInfo = room.GetComponent<RoomInfo>();
+                return roomInfo.Left;
+            }), transform);
+            var newRoomInfo = newRoom.GetComponent<RoomInfo>();
+            newRoomInfo.SetRoomDepth(furthestInfo.getRoomDepth());
+            newRoomInfo.SetRoomPosition(furthestPosition);
+            newRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.left, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.right, newRoom);
+        }
+        else if (furthestInfo.Right)
+        {
+            var room = furthestInfo.GetRoomInDirection(RoomInfo.RoomDirection.right);
+            var roomInfo = room.GetComponent<RoomInfo>();
+            _roomList.Remove(furthestRoom);
+            Destroy(furthestRoom);
+            var newRoom = Instantiate(_bossRoomPrefabs.First(room =>
+            {
+                var roomInfo = room.GetComponent<RoomInfo>();
+                return roomInfo.Right;
+            }), transform);
+            var newRoomInfo = newRoom.GetComponent<RoomInfo>();
+            newRoomInfo.SetRoomDepth(furthestInfo.getRoomDepth());
+            newRoomInfo.SetRoomPosition(furthestPosition);
+            newRoomInfo.SetRoomDirection(RoomInfo.RoomDirection.right, room);
+            roomInfo.SetRoomDirection(RoomInfo.RoomDirection.left, newRoom);
+        }
     }
 }
