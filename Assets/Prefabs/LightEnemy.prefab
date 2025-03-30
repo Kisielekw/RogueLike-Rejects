@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
+  _backForce: 1
 --- !u!114 &7814741497149298144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7757864075885737485
 BoxCollider2D:
   m_ObjectHideFlags: 0
