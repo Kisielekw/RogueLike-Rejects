@@ -18,7 +18,6 @@ public class GenerateDungeon : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
         _roomList = new List<GameObject> { Instantiate(_entryPrefab[Random.Range(0,_entryPrefab.Length-1)], transform) };
         var roomInfo = _roomList[0].GetComponent<RoomInfo>();
         roomInfo.SetRoomDepth(0);
