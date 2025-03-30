@@ -89,5 +89,6 @@ public class EnemyRangeControl : MonoBehaviour
         projectile.transform.position = transform.position + direction;
         projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * _projectileSpeed;
         projectile.GetComponent<Rigidbody2D>().angularVelocity = 360;
+        Destroy(projectile, 5);
     }
 }
