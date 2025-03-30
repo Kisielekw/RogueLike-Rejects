@@ -18,27 +18,38 @@ public class EnemySpawn : MonoBehaviour
 
     void Start()
     {
-        SpawnEnemies();
+        SpawnEnemiesLight();
+        SpawnEnemiesHeavy();
+        SpawnEnemiesRanged();
     }
 
     void FixedUpdate()
     {
-        //if(_eclipseData.IsEclipseActive)
-            //SpawnEnemies();
+        if (_eclipseData.IsEclipseActive && transform.childCount > 0)
+            SpawnEnemiesLight();
+        
     }
 
-    void SpawnEnemies()
+    void SpawnEnemiesLight()
     {
         for (int i = 0; i < _lightNumber; i++)
         {
             var enemy = Instantiate(_enemyLightPrefab, transform);
             enemy.transform.localPosition = _lightSpawnPos[Random.Range(0, _lightSpawnPos.Length)];
         }
+    }
+
+    void SpawnEnemiesHeavy()
+    {
         for (int i = 0; i < _heavyNumber; i++)
         {
             var enemy = Instantiate(_enemyHeavyPrefab, transform);
             enemy.transform.localPosition = _heavySpawnPos[Random.Range(0, _heavySpawnPos.Length)];
         }
+    }
+
+    void SpawnEnemiesRanged()
+    {
         for (int i = 0; i < _rangedNumber; i++)
         {
             var enemy = Instantiate(_enemyRangedPrefab, transform);

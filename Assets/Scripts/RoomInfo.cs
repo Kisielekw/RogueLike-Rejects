@@ -16,6 +16,7 @@ public class RoomInfo : MonoBehaviour
     
     private int roomDepth;
     private GameObject upRoom, downRoom, leftRoom, rightRoom;
+    private bool _isCleared = false;
 
     public void SetRoomDepth(int depth)
     {
@@ -106,6 +107,8 @@ public class RoomInfo : MonoBehaviour
                 return;
         }
 
+        _isCleared = true;
+
         foreach (Transform child in transform.Find("Doors"))
         {
             child.GetComponent<Collider2D>().isTrigger = true;
@@ -127,5 +130,10 @@ public class RoomInfo : MonoBehaviour
             default:
                 return null;
         }
+    }
+
+    public bool IsCleared()
+    {
+        return _isCleared;
     }
 }

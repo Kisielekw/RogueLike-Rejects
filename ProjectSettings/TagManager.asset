@@ -4,12 +4,16 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemy
+  - Light Enemy
+  - Heavy Enemy
+  - Ranged Enemy
+  - Boss
+  - Projectile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 

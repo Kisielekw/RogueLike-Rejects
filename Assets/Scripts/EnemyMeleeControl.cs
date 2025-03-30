@@ -32,7 +32,7 @@ public class EnemyMeleeControl : MonoBehaviour
             return;
 
         float distance = Vector3.Distance(player.transform.position, transform.position);
-        transform.up = player.transform.position;
+        transform.up = (player.transform.position - transform.position);
         if (distance > _attackRange)
         {
             _isMoving = true;

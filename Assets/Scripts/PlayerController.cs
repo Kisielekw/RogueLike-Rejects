@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         Vector2 LookVector = (_look.ReadValue<Vector2>() - playerScreenPos).normalized;
 
         _weapon.transform.up = LookVector;
-        _weapon.transform.localPosition = new Vector3(LookVector.x, LookVector.y, 0);
+        _weapon.transform.localPosition = (Vector3) LookVector;
 
         
         if(_hit.IsPressed() && !_transitioning)

@@ -45,7 +45,7 @@ public class EnemyRangeControl : MonoBehaviour
         _attackTime += Time.deltaTime;
 
         float distance = Vector3.Distance(player.transform.position, transform.position);
-        transform.up = player.transform.position;
+        transform.up = (player.transform.position - transform.position);
         if (distance > _attackRangeMax)
         {
             _isMoving = true;
@@ -54,7 +54,7 @@ public class EnemyRangeControl : MonoBehaviour
         }
         else if (distance < _attackRangeMin)
         {
-            transform.up = transform.position - (player.transform.position - transform.position);
+            transform.up = -transform.up;
             _isMoving = true;
             _tooFar = false;
             return;

@@ -193,12 +193,17 @@ MonoBehaviour:
   - {fileID: 5054636173686961184, guid: 887301dee5d40a14d94aef422d79bffb, type: 3}
   - {fileID: 5054636173686961184, guid: cd597ead027196741b087a3921c4d624, type: 3}
   - {fileID: 5054636173686961184, guid: 537d872205f8d464d8981bc0fc1c85c6, type: 3}
-  _entryPrefab:
+  _entryPrefabs:
   - {fileID: 5054636173686961184, guid: 4299be7a5e47da94f8d87b29e21b0ecc, type: 3}
   - {fileID: 5054636173686961184, guid: 43ab4003f66e9a44f9583f2912a1b3fe, type: 3}
   - {fileID: 5054636173686961184, guid: 015c406e5aa2dfb43b14f241654f6429, type: 3}
   - {fileID: 5054636173686961184, guid: 1cc64cd49af08e44ea8278f206272d6b, type: 3}
   - {fileID: 5054636173686961184, guid: 1e3757affa8127a4a9d98fe87301ae16, type: 3}
+  _bossRoomPrefabs:
+  - {fileID: 5054636173686961184, guid: b5b4895b1b0595e40b01639145672025, type: 3}
+  - {fileID: 5054636173686961184, guid: c6e07d3298b0e394d9e7e11f414c41a6, type: 3}
+  - {fileID: 5054636173686961184, guid: 14c15b08db17ecd4683efc9d417249d5, type: 3}
+  - {fileID: 5054636173686961184, guid: 958f8d2ccf66ffc49a235f0be36f511c, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: 3c9b9bba352d5b6498f4583ed781b481, type: 2}
   _hitSize: 0.36
+  _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1633495664
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +654,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 4334783836991956000, guid: f84e18021c632954cb718b75d4d97b6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -666,7 +674,7 @@ Transform:
   m_GameObject: {fileID: 1633495664}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -721,7 +729,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.41
 --- !u!50 &1633495669
 Rigidbody2D:
   serializedVersion: 5
