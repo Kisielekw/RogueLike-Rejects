@@ -7,12 +7,6 @@ public class PlayerHelthScript : MonoBehaviour
 
     public PlayerData playerData;
 
-    void Start()
-    {
-        _healthSlider.maxValue = playerData.maxHealth;
-        playerData.health = playerData.maxHealth;
-    }
-
     public void TakeDamage(int damage)
     {
         playerData.health -= damage;
