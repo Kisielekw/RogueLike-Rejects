@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _movement;
     private InputAction _look;
     private InputAction _hit;
+    private InputAction _exit;
 
     private GameObject _weapon;
 
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
         _movement = InputSystem.actions.FindAction("Move");
         _look = InputSystem.actions.FindAction("Look");
         _hit = InputSystem.actions.FindAction("Attack");
+        _exit = InputSystem.actions.FindAction("Exit");
     }
 
     // Update is called once per frame
@@ -46,6 +49,9 @@ public class PlayerController : MonoBehaviour
         
         if(_hit.IsPressed() && !_transitioning)
             _weapon.GetComponent<PlayerAttack>().OnHit();
+
+        if(_exit.IsPressed())
+            SceneManager.LoadScene(0);
 
     }
 
