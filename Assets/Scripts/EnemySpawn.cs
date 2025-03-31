@@ -18,6 +18,27 @@ public class EnemySpawn : MonoBehaviour
 
     private bool _isEclipseActive = false;
 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        foreach (var pos in _lightSpawnPos)
+        {
+            Gizmos.DrawWireSphere(pos, 0.5f);
+        }
+
+        Gizmos.color = Color.green;
+        foreach (var pos in _heavySpawnPos)
+        {
+            Gizmos.DrawWireSphere(pos, 0.5f);
+        }
+
+        Gizmos.color = Color.red;
+        foreach (var pos in _heavySpawnPos)
+        {
+            Gizmos.DrawWireSphere(pos, 0.5f);
+        }
+    }
+
     void Start()
     {
         SpawnEnemiesLight();
