@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (_exit.IsPressed())
+            SceneManager.LoadScene(0);
+
         if (_playerData.Health <= 0)
             return;
 
@@ -52,9 +56,6 @@ public class PlayerController : MonoBehaviour
         
         if(_hit.IsPressed() && !_transitioning)
             _weapon.GetComponent<PlayerAttack>().OnHit();
-
-        if (_exit.IsPressed())
-            SceneManager.LoadScene(0);
     }
 
     void FixedUpdate()
