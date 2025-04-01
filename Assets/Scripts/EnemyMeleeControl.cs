@@ -36,7 +36,6 @@ public class EnemyMeleeControl : MonoBehaviour
         if (distance > _attackRange)
         {
             _isMoving = true;
-            _attackTime = _attackCooldown;
             return;
         }
 
