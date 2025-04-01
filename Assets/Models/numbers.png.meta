@@ -1,37 +1,19 @@
 fileFormatVersion: 2
-guid: 03fac6a5bc1b002448385f70235429ff
+guid: 3c6a8f5853ae3ec45b58fd31183026fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4571436669323824183
-    second: Digets_0
+      213: -7542371115539988336
+    second: numbers_0
   - first:
-      213: -7400979537240546962
-    second: Digets_1
+      213: -1797931468360238817
+    second: numbers_1
   - first:
-      213: -2405619823814606822
-    second: Digets_2
+      213: 8660018047190439917
+    second: numbers_2
   - first:
-      213: 2445983601817405400
-    second: Digets_3
-  - first:
-      213: -5547103543821953178
-    second: Digets_4
-  - first:
-      213: 6223727281544218010
-    second: Digets_5
-  - first:
-      213: 2068494013955408727
-    second: Digets_6
-  - first:
-      213: 6361791028892094540
-    second: Digets_7
-  - first:
-      213: -592830023469655098
-    second: Digets_8
-  - first:
-      213: -8287863079824395357
-    second: Digets_9
+      213: -3498881285385226111
+    second: numbers_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Digets_0
+      name: numbers_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
+        y: 150
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c332cbd19efe80c0800000000000000
-      internalID: -4571436669323824183
+      spriteID: 090821e7e6d145790800000000000000
+      internalID: -7542371115539988336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digets_1
+      name: numbers_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 50
+        y: 150
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e61a7dca2507a4990800000000000000
-      internalID: -7400979537240546962
+      spriteID: f1934e9fad67c07e0800000000000000
+      internalID: -1797931468360238817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digets_2
+      name: numbers_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 100
+        y: 150
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1084e804858d9ed0800000000000000
-      internalID: -2405619823814606822
+      spriteID: de7124bf7809e2870800000000000000
+      internalID: 8660018047190439917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digets_3
+      name: numbers_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
+        x: 150
+        y: 150
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,152 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d7c1c06021e1f120800000000000000
-      internalID: 2445983601817405400
+      spriteID: 188f951420a717fc0800000000000000
+      internalID: -3498881285385226111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Digets_4
+      name: numbers_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6679e2a77bab403b0800000000000000
-      internalID: -5547103543821953178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Digets_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a95c953ecfe1f5650800000000000000
-      internalID: 6223727281544218010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Digets_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75385d9a854c4bc10800000000000000
-      internalID: 2068494013955408727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Digets_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c40516c0c3f994850800000000000000
-      internalID: 6361791028892094540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Digets_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cb97ee0c38d5c7f0800000000000000
-      internalID: -592830023469655098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Digets_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a3fdfb90789bfc80800000000000000
-      internalID: -8287863079824395357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Digets_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
+        x: 0
+        y: 100
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,8 +225,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6368e90b37b3b414c849df55cee2a65c
-      internalID: -1206430387
+      spriteID: c2fef077d544eaa4dbe32d8ce8604af9
+      internalID: 2129973022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: numbers_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0066ab34258694c45a295ec5cddc4b93
+      internalID: 479640863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: numbers_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d66dabac7801b0458776406d5084530
+      internalID: 1695712760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: numbers_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 100
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6965ec63a3250469ed52fa4b1e019e
+      internalID: 971365261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: numbers_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da97305c13446e40b634c5fd84644c4
+      internalID: -15755756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: numbers_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4d71f2dd615b34e8e1800080dd0521
+      internalID: 1393004087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: numbers_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42ed921d9a0728489adc293e806255b
+      internalID: -1097874424
       vertices: []
       indices: 
       edges: []
@@ -385,7 +367,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fffcc80a272af474ebb0c49a2f12fc13
+    spriteID: 405d8468c3059ff4f9b7070effa9b1a4
     internalID: 0
     vertices: []
     indices: 
@@ -395,17 +377,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Digets_0: -4571436669323824183
-      Digets_1: -7400979537240546962
-      Digets_10: -1206430387
-      Digets_2: -2405619823814606822
-      Digets_3: 2445983601817405400
-      Digets_4: -5547103543821953178
-      Digets_5: 6223727281544218010
-      Digets_6: 2068494013955408727
-      Digets_7: 6361791028892094540
-      Digets_8: -592830023469655098
-      Digets_9: -8287863079824395357
+      numbers_0: -7542371115539988336
+      numbers_1: -1797931468360238817
+      numbers_10: -1097874424
+      numbers_11: 1095119306
+      numbers_12: 1484478806
+      numbers_13: -317866036
+      numbers_14: 947315673
+      numbers_15: -1454762602
+      numbers_2: 8660018047190439917
+      numbers_3: -3498881285385226111
+      numbers_4: 2129973022
+      numbers_5: 479640863
+      numbers_6: 1695712760
+      numbers_7: 971365261
+      numbers_8: -15755756
+      numbers_9: 1393004087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
