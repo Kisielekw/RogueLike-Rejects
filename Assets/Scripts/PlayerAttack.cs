@@ -10,24 +10,11 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        _hitTimer = _playerData.HitCooldown;
-    }
-
-    void Update()
-    {
-        if (_hitTimer >= _playerData.HitCooldown)
-            return;
-
-        _hitTimer += Time.deltaTime;
     }
 
     public void OnHit()
     {
-        if(_hitTimer < _playerData.HitCooldown)
-            return;
-
         transform.Find("Hit").gameObject.GetComponent<PlayerHitCollider>().OnHit();
-        _hitTimer = 0.0f;
     }
 
     public bool isHitting()
