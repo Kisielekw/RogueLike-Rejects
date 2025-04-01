@@ -8,6 +8,7 @@ public class ButtonScripts : MonoBehaviour
     public void StartGame()
     {
         playerData.Health = playerData.MaxHealth;
+        playerData.Score = 0;
         SceneManager.LoadScene(1);
     }
 

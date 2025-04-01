@@ -20,6 +20,11 @@ public class PlayerHelthScript : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        _healthSlider.maxValue = playerData.MaxHealth;
+    }
+
     void Update()
     {
         _healthSlider.value = playerData.Health;
