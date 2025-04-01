@@ -16,6 +16,9 @@ public class EnemyMeleeControl : MonoBehaviour
     [SerializeField]
     private int _attackDamage;
 
+    [SerializeField]
+    private EclipseData _eclipseData;
+
     private bool _isMoving = false;
     private float _attackTime;
 
@@ -43,7 +46,12 @@ public class EnemyMeleeControl : MonoBehaviour
         _attackTime += Time.deltaTime;
         if (_attackTime >= _attackCooldown)
         {
-            player.GetComponent<PlayerHelthScript>().TakeDamage(_attackDamage);
+            int damage = _attackDamage;
+
+            if(CompareTag("Boss"))
+                damage = _eclipseData.IsEclipseActive ? _attackDamage * 2 : _attackDamage;
+
+            player.GetComponent<PlayerHelthScript>().TakeDamage(damage);
             _attackTime = 0;
         }
     }

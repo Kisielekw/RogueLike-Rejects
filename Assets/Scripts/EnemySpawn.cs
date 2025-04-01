@@ -53,7 +53,8 @@ public class EnemySpawn : MonoBehaviour
         SpawnEnemiesLight();
         SpawnEnemiesHeavy();
         SpawnEnemiesRanged();
-        SpawnEnemiesBoss();
+        if(_isBossRoom)
+            SpawnEnemiesBoss();
     }
 
     void FixedUpdate()

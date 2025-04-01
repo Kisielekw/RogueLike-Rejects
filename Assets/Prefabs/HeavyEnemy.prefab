@@ -125,6 +125,7 @@ MonoBehaviour:
   _attackRange: 1
   _attackCooldown: 2.5
   _attackDamage: 2
+  _eclipseData: {fileID: 11400000, guid: 9fc24f8f29b506a40befddf7f5d6c10e, type: 2}
 --- !u!50 &4807140347581014913
 Rigidbody2D:
   serializedVersion: 5
