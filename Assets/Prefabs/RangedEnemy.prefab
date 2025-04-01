@@ -170,6 +170,8 @@ MonoBehaviour:
   _healthMax: 2
   _backForce: 1
   _eclipseData: {fileID: 11400000, guid: 9fc24f8f29b506a40befddf7f5d6c10e, type: 2}
+  _coin: {fileID: 5916745883415393326, guid: 70d7c1c09128ef94a99e03e1707888c1, type: 3}
+  _coinDrop: 2
 --- !u!114 &2095843412586962011
 MonoBehaviour:
   m_ObjectHideFlags: 0
