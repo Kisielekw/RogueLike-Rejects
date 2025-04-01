@@ -34,14 +34,14 @@ public class EnemyHealth : MonoBehaviour
         {
             _isEclipseActive = true;
 
-            if (CompareTag("HeavyEnemy"))
+            if (CompareTag("Heavy Enemy"))
                 _health += _healthMax;
         }
 
         if(!_eclipseData.IsEclipseActive && _isEclipseActive)
         {
             _isEclipseActive = false;
-            if (CompareTag("HeavyEnemy"))
+            if (CompareTag("Heavy Enemy"))
                 _health -= _healthMax;
         }
 
@@ -69,7 +69,7 @@ public class EnemyHealth : MonoBehaviour
 
         if(_health <= 0)
         {
-            for(int i = 0; i < _coinDrop; i++)
+            for(int i = 0; i < (_eclipseData.IsEclipseActive ? _coinDrop * 2 : _coinDrop); i++)
             {
                 var coin = Instantiate(_coin, transform.position, Quaternion.identity);
                 coin.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)) * 100);
