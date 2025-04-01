@@ -33,7 +33,7 @@ public class EnemySpawn : MonoBehaviour
         }
 
         Gizmos.color = Color.red;
-        foreach (var pos in _heavySpawnPos)
+        foreach (var pos in _rangedSpawnPos)
         {
             Gizmos.DrawWireSphere(pos, 0.5f);
         }

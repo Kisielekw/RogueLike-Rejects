@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_playerData.Health <= 0)
+            return;
+
         Vector2 playerScreenPos = _camera.WorldToScreenPoint(transform.position);
         Vector2 LookVector = (_look.ReadValue<Vector2>() - playerScreenPos).normalized;
 
@@ -50,13 +53,15 @@ public class PlayerController : MonoBehaviour
         if(_hit.IsPressed() && !_transitioning)
             _weapon.GetComponent<PlayerAttack>().OnHit();
 
-        if(_exit.IsPressed())
+        if (_exit.IsPressed())
             SceneManager.LoadScene(0);
-
     }
 
     void FixedUpdate()
     {
+        if (_playerData.Health <= 0)
+            return;
+
         if(_transitioning)
         {
             _transitionTime += Time.fixedDeltaTime;

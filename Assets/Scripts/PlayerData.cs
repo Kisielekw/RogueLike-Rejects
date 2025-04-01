@@ -3,9 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "Scriptable Objects/PlayerData")]
 public class PlayerData : ScriptableObject
 {
-    public int maxHealth;
-    public int health;
+    public int MaxHealth;
+    public int Health;
     public float speed;
-    public int damage;
-    public float hitCooldown;
+    public int Damage;
+    public float HitCooldown;
+    public int Score;
 }
