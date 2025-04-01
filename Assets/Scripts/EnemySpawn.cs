@@ -65,6 +65,8 @@ public class EnemySpawn : MonoBehaviour
         {
             var enemy = Instantiate(_enemyLightPrefab, transform);
             enemy.transform.localPosition = _lightSpawnPos[Random.Range(0, _lightSpawnPos.Length)];
+            var displacement = new Vector2(Random.Range(-.1f, .1f), Random.Range(-.1f, .1f));
+            enemy.transform.localPosition += (Vector3)displacement;
         }
     }
 
@@ -74,6 +76,9 @@ public class EnemySpawn : MonoBehaviour
         {
             var enemy = Instantiate(_enemyHeavyPrefab, transform);
             enemy.transform.localPosition = _heavySpawnPos[Random.Range(0, _heavySpawnPos.Length)];
+            var displacement = new Vector2(Random.Range(-.1f, .1f), Random.Range(-.1f, .1f));
+            enemy.transform.localPosition += (Vector3)displacement;
+
         }
     }
 
@@ -83,6 +88,8 @@ public class EnemySpawn : MonoBehaviour
         {
             var enemy = Instantiate(_enemyRangedPrefab, transform);
             enemy.transform.localPosition = _rangedSpawnPos[Random.Range(0, _rangedSpawnPos.Length)];
+            var displacement = new Vector2(Random.Range(-.1f, .1f), Random.Range(-.1f, .1f));
+            enemy.transform.localPosition += (Vector3)displacement;
         }
     }
 }
