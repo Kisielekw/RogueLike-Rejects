@@ -3502,6 +3502,7 @@ MonoBehaviour:
   _enemyLightPrefab: {fileID: 6161404624719874261, guid: 0c9884106fcdcaa489f1ab5b41fecbbe, type: 3}
   _enemyHeavyPrefab: {fileID: 6161404624719874261, guid: f49742a6abe710445b08e78c16e23324, type: 3}
   _enemyRangedPrefab: {fileID: 6946574007686614861, guid: 328dc71c837bf1540a32365973388970, type: 3}
+  _enemyBossPrefab: {fileID: 0}
   _lightSpawnPos:
   - {x: -2.53, y: 0}
   - {x: 2.74, y: 0}
@@ -3512,3 +3513,4 @@ MonoBehaviour:
   _heavyNumber: 1
   _rangedNumber: 0
   _eclipseData: {fileID: 11400000, guid: 9fc24f8f29b506a40befddf7f5d6c10e, type: 2}
+  _isBossRoom: 0
