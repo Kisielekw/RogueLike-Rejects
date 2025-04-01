@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      solareclipsescreen_0: -7727737482318951402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
