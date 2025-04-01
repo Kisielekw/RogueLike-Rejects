@@ -104,7 +104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
+  _healthMax: 0
   _backForce: 1
+  _eclipseData: {fileID: 11400000, guid: 9fc24f8f29b506a40befddf7f5d6c10e, type: 2}
 --- !u!114 &7814741497149298144
 MonoBehaviour:
   m_ObjectHideFlags: 0

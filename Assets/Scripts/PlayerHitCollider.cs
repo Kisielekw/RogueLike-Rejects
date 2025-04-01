@@ -22,7 +22,7 @@ public class PlayerHitCollider : MonoBehaviour
         var objectsHit = Physics2D.OverlapCircleAll(transform.position, _hitSize, _enemyLayer);
         foreach (Collider2D obj in objectsHit)
         {
-            obj.GetComponent<EnemyHealth>().Damage(_playerData.damage);
+            obj.GetComponent<EnemyHealth>().Damage(_playerData.Damage);
         }
     }
 }

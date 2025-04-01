@@ -4,21 +4,24 @@ using UnityEngine.UI;
 public class PlayerHelthScript : MonoBehaviour
 {
     [SerializeField] private Slider _healthSlider;
+    [SerializeField] private GameObject _GameUI;
+    [SerializeField] private GameObject _GameOverUI;
 
     public PlayerData playerData;
 
     public void TakeDamage(int damage)
     {
-        playerData.health -= damage;
-        if (playerData.health <= 0)
+        playerData.Health -= damage;
+        if (playerData.Health <= 0)
         {
-            playerData.health = 0;
-            Debug.Log("Player died");
+            playerData.Health = 0;
+            _GameUI.SetActive(false);
+            _GameOverUI.SetActive(true);
         }
     }
 
     void Update()
     {
-        _healthSlider.value = playerData.health;
+        _healthSlider.value = playerData.Health;
     }
 }

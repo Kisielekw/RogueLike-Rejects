@@ -7,12 +7,17 @@ public class ButtonScripts : MonoBehaviour
 
     public void StartGame()
     {
-        playerData.health = playerData.maxHealth;
+        playerData.Health = playerData.MaxHealth;
         SceneManager.LoadScene(1);
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void BackToMain()
+    {
+        SceneManager.LoadScene(0);
     }
 }
