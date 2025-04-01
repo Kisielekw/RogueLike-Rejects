@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
         {
             _isEclipseActive = true;
 
-            if (CompareTag("Heavy Enemy"))
+            if (CompareTag("Heavy Enemy") || CompareTag("Boss"))
                 _health += _healthMax;
         }
 
