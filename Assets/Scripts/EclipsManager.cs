@@ -7,6 +7,7 @@ public class EclipsManager : MonoBehaviour
     [SerializeField] private Slider eclipseSlider;
     [SerializeField] private Image eclipseUp;
     [SerializeField] private Image eclipseDown;
+    [SerializeField] private GameObject eclipseEdge;
 
     void Start()
     {
@@ -21,12 +22,14 @@ public class EclipsManager : MonoBehaviour
             eclipseSlider.value = 1 - (_eclipseData.GetTime() - _eclipseData.eclipsTimeStart) / _eclipseData.eclipsDuration;
             eclipseUp.enabled = false;
             eclipseDown.enabled = true;
+            eclipseEdge.SetActive(false);
         }
         else
         {
             eclipseSlider.value = _eclipseData.GetTime() / _eclipseData. eclipsTimeStart;
             eclipseUp.enabled = true;
             eclipseDown.enabled = false;
+            eclipseEdge.SetActive(true);
         }
     }
 }
