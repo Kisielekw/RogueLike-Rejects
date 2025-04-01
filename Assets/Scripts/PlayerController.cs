@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private bool _transitioning = false;
     private float _transitionTime = 0;
+    private float _hitTimer = 0;
     private Vector2 _transitionDestination;
     private Vector2 _transitionStart;
 
@@ -35,11 +36,14 @@ public class PlayerController : MonoBehaviour
         _look = InputSystem.actions.FindAction("Look");
         _hit = InputSystem.actions.FindAction("Attack");
         _exit = InputSystem.actions.FindAction("Exit");
+
+        _hitTimer = _playerData.HitCooldown;
     }
 
     // Update is called once per frame
     void Update()
     {
+        _hitTimer += Time.deltaTime;
 
         if (_exit.IsPressed())
             SceneManager.LoadScene(0);
@@ -53,9 +57,17 @@ public class PlayerController : MonoBehaviour
         _weapon.transform.up = LookVector;
         _weapon.transform.localPosition = (Vector3) LookVector;
 
-        
-        if(_hit.IsPressed() && !_transitioning)
+        _weapon.SetActive(false);
+        if (_hitTimer < _playerData.HitCooldown)
+            return;
+
+        _weapon.SetActive(true);
+
+        if (_hit.IsPressed() && !_transitioning)
+        {
+            _hitTimer = 0.0f;
             _weapon.GetComponent<PlayerAttack>().OnHit();
+        }
     }
 
     void FixedUpdate()

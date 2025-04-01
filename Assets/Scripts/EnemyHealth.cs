@@ -15,6 +15,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private EclipseData _eclipseData;
 
+    [SerializeField]
+    private GameObject _coin;
+
+    [SerializeField]
+    private int _coinDrop;
+
     private Vector2 _hitStart;
     private Vector2 _hitEnd;
 
@@ -50,7 +56,6 @@ public class EnemyHealth : MonoBehaviour
         {
             _hitTimer = 0;
             _isHit = false;
-            GetComponent<Collider2D>().enabled = true;
         }
     }
 
@@ -59,13 +64,20 @@ public class EnemyHealth : MonoBehaviour
         if (_isHit)
             return;
 
-        GetComponent<Collider2D>().enabled = false;
-
         _isHit = true;
         _health -= damage;
 
         if(_health <= 0)
+        {
+            for(int i = 0; i < _coinDrop; i++)
+            {
+                var coin = Instantiate(_coin, transform.position, Quaternion.identity);
+                coin.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)) * 100);
+                coin.GetComponent<Rigidbody2D>().AddTorque(UnityEngine.Random.Range(-1f, 1f) * 100);
+            }
+
             Destroy(gameObject, 0.25f);
+        }
 
         var player = GameObject.FindWithTag("Player");
         Vector2 playerToEnemy = (transform.position - player.transform.position).normalized;

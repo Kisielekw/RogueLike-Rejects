@@ -1526,17 +1526,17 @@ MonoBehaviour:
   _digit1: {fileID: 1999085409}
   _digit2: {fileID: 486827681}
   _digits:
-  - {fileID: -4571436669323824183, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: -7400979537240546962, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: -2405619823814606822, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: 2445983601817405400, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: -5547103543821953178, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: 6223727281544218010, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: 2068494013955408727, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: 6361791028892094540, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: -592830023469655098, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: -8287863079824395357, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
-  - {fileID: -1206430387, guid: 03fac6a5bc1b002448385f70235429ff, type: 3}
+  - {fileID: 1393004087, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: -7542371115539988336, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: -1797931468360238817, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: 8660018047190439917, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: -3498881285385226111, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: 2129973022, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: 479640863, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: 1695712760, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: 971365261, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: -15755756, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
+  - {fileID: -1097874424, guid: 3c6a8f5853ae3ec45b58fd31183026fd, type: 3}
 --- !u!1 &1289695987
 GameObject:
   m_ObjectHideFlags: 0
