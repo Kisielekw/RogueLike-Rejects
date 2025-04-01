@@ -22,14 +22,14 @@ public class EclipsManager : MonoBehaviour
             eclipseSlider.value = 1 - (_eclipseData.GetTime() - _eclipseData.eclipsTimeStart) / _eclipseData.eclipsDuration;
             eclipseUp.enabled = false;
             eclipseDown.enabled = true;
-            eclipseEdge.SetActive(false);
+            eclipseEdge.SetActive(true);
         }
         else
         {
             eclipseSlider.value = _eclipseData.GetTime() / _eclipseData. eclipsTimeStart;
             eclipseUp.enabled = true;
             eclipseDown.enabled = false;
-            eclipseEdge.SetActive(true);
+            eclipseEdge.SetActive(false);
         }
     }
 }
