@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a5cc08c800af8604cbb559d0e0736854
+guid: 5406e9be5d9507947b7b5b342802efb0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7727737482318951402
-    second: solareclipsescreen_0
+      213: -5816642994671486895
+    second: portal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: solareclipsescreen_0
+      name: portal_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 320
-        height: 192
+        width: 127
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61c48e004bf81c490800000000000000
-      internalID: -7727737482318951402
+      spriteID: 1587755a302274fa0800000000000000
+      internalID: -5816642994671486895
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      solareclipsescreen_0: -7727737482318951402
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
