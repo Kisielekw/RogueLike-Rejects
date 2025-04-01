@@ -47,12 +47,17 @@ MonoBehaviour:
   _enemyLightPrefab: {fileID: 6161404624719874261, guid: 0c9884106fcdcaa489f1ab5b41fecbbe, type: 3}
   _enemyHeavyPrefab: {fileID: 6161404624719874261, guid: f49742a6abe710445b08e78c16e23324, type: 3}
   _enemyRangedPrefab: {fileID: 6946574007686614861, guid: 328dc71c837bf1540a32365973388970, type: 3}
-  _lightSpawnPos: []
-  _heavySpawnPos: []
-  _rangedSpawnPos: []
-  _lightNumber: 0
-  _heavyNumber: 0
-  _rangedNumber: 0
+  _lightSpawnPos:
+  - {x: 0.03, y: 0.7}
+  _heavySpawnPos:
+  - {x: -2.68, y: 0}
+  - {x: 2.83, y: 0}
+  _rangedSpawnPos:
+  - {x: -2.67, y: -1.07}
+  - {x: 2.6, y: -1.07}
+  _lightNumber: 2
+  _heavyNumber: 2
+  _rangedNumber: 2
   _eclipseData: {fileID: 11400000, guid: 9fc24f8f29b506a40befddf7f5d6c10e, type: 2}
 --- !u!1 &2063331260791548558
 GameObject:
