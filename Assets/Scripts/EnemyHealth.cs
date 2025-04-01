@@ -15,6 +15,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private EclipseData _eclipseData;
 
+    [SerializeField]
+    private GameObject _coin;
+
+    [SerializeField]
+    private int _coinDrop;
+
     private Vector2 _hitStart;
     private Vector2 _hitEnd;
 
@@ -50,7 +56,6 @@ public class EnemyHealth : MonoBehaviour
         {
             _hitTimer = 0;
             _isHit = false;
-            GetComponent<Collider2D>().enabled = true;
         }
     }
 
@@ -58,8 +63,6 @@ public class EnemyHealth : MonoBehaviour
     {
         if (_isHit)
             return;
-
-        GetComponent<Collider2D>().enabled = false;
 
         _isHit = true;
         _health -= damage;
